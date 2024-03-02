@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+    <link href="index.css" rel="stylesheet" />
+    <title>Email me a Quote!</title>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <form id="form">
+        <div class="sub-container">
+          <div class="item item-head">
+            <span style="font-size: 26px; font-weight: 600"
+              >Email me a Quote!</span
+            >
+          </div>
+          <div class="item">
+            <label>Name</label>
+            <input type="text" name="" id="name" />
+            <span class="error"></span>
+          </div>
+          <div class="item">
+            <label>Email</label> <input type="email" name="" id="email" />
+            <span class="error"></span>
+          </div>
+          <div class="item item-btn" style="padding-top: 15px">
+            <input id="submit" type="submit" value="Send Quote" />
+          </div>
+        </div>
+      </form>
+    </div>
+    <div id="loader" class="loader"></div>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
