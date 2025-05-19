@@ -58,7 +58,7 @@ const validateInputs = () => {
 
 async function fetchQuoteAndMail(templateParams) {
   if (loader) loader.style.display = "block";
-  const url = "https://api.quotable.io/random";
+  const url = "https://dummyjson.com/quotes/random";
   const options = {
     method: "GET",
   };
@@ -66,7 +66,7 @@ async function fetchQuoteAndMail(templateParams) {
   try {
     const quoteResponse = await fetch(url, options);
     const quoteResult = await quoteResponse.json();
-    templateParams.message = quoteResult.content;
+    templateParams.message = quoteResult.quote;
     const emailResponse = await emailjs.send(
       "service_19mf5oh",
       "template_fzex82c",
